@@ -251,7 +251,6 @@ include_directories(
 target_link_libraries(TheDarkMod
 		${zlib_LIBRARIES}
 		${libcurl_LIBRARIES}
-		${openal_LIBRARIES}
 		${vorbis_LIBRARIES}
 		${ogg_LIBRARIES}
 		${devil_LIBRARIES}
@@ -262,6 +261,7 @@ target_link_libraries(TheDarkMod
 		${glfw_LIBRARIES}
 )
 target_link_libraries(TheDarkMod debug ${pugixml_LIBRARIES_D} optimized ${pugixml_LIBRARIES})
+target_link_libraries(TheDarkMod debug ${openal_LIBRARIES_D} optimized ${openal_LIBRARIES})
 
 if (WIN32)
 	target_link_libraries(TheDarkMod ws2_32 iphlpapi winmm bcrypt dinput8 dbghelp)
